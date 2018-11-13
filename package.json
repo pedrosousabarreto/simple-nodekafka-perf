@@ -1,0 +1,28 @@
+{
+  "name": "simple-nodekafka-perf",
+  "version": "0.0.1",
+  "description": "simple node + kafka performance test for node-rdkafka lib parameters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrosousabarreto/simple-nodekafka-perf.git"
+  },
+  "keywords": [
+    "node",
+    "kafka",
+    "rdkafka",
+    "peformance"
+  ],
+  "author": "Pedro Barreto <pedrosousabarreto@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrosousabarreto/simple-nodekafka-perf/issues"
+  },
+  "homepage": "https://github.com/pedrosousabarreto/simple-nodekafka-perf#readme",
+  "dependencies": {
+    "node-rdkafka": "^2.4.2"
+  }
+}
