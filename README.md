@@ -9,7 +9,7 @@ Start Kafka container
 
 ### Usage
 
-#####Kafka increase partitions
+##### Kafka increase partitions
 `# docker exec -ti kafkaperftest /bin/bash`
 
 Inside the container:
@@ -17,11 +17,11 @@ Inside the container:
 `# sh kafka-topics.sh --alter --zookeeper localhost:2181 --topic topic --partitions 8` (or whatever number of partitions)
 *If this command fails, run the producer for a second and then run this again.*
 
-#####Consumer(s)
+##### Consumer(s)
 Initiate as many as these as partitions
 `# node consumer.js`
 
-#####Producer
+##### Producer
 
 node producer msgs_per_cycle cycle_interval_ms=1000
 
