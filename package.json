@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/pedrosousabarreto/simple-nodekafka-perf#readme",
   "dependencies": {
+    "kafka-node": "^3.0.1",
     "node-rdkafka": "^2.4.2"
   }
 }

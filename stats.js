@@ -19,7 +19,6 @@ consumer.on('ready', function() {
 
 	console.log(`Stats consumer ready, starting stats...`);
 
-	const timeout = 900, partition = 0;
 	const meta_req_opts = {topic: "topic", timeout: 800};
 	setInterval(()=>{
 		consumer.getMetadata(meta_req_opts, (err, meta)=>{
@@ -29,12 +28,6 @@ consumer.on('ready', function() {
 			parse_and_print_meta(meta);
 
 		});
-
-		// consumer.queryWatermarkOffsets("topic", partition, timeout, (err, offsets) =>{
-		// 	var high = offsets.highOffset;
-		// 	var low = offsets.lowOffset;
-		// 	console.log(offsets);
-		// });
 
 
 	}, 1000);
@@ -66,7 +59,5 @@ const parse_and_print_meta = (meta)=>{
 			console.log(`Partition ${i} low: ${offsets.lowOffset} high: ${offsets.highOffset}`);
 		});
 	}
-
-	// console.log(`Partition count: ${topic_meta_part.length}`)
 
 };

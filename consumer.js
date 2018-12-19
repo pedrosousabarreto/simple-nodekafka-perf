@@ -59,7 +59,7 @@ var consumer = new Kafka.KafkaConsumer({
 }, {});
 
 
-const handler_fn = (err, messages)=>{
+const handler_fn = (err, message)=>{
 	if(err)
 		return console.error(err);
 
@@ -106,16 +106,16 @@ consumer.on('ready', function() {
 
 	perf_inc_total();
 
-	// consumer.consume(1);
+	consumer.consume(1);
 
 }).on("subscribed", (topics)=>{
 	console.log(`${consumer_id} - consumer topic subscription ready`);
 
 	perf_mon_start();
 
-	consumer.consume(); // flowing mode / stream
+	// consumer.consume(); // flowing mode / stream
 
-	// consumer.consume(0);
+	consumer.consume(0);
 	// consumer.consume(0, handler_fn);
 
 	console.log(`${consumer_id} - after first consume`);
